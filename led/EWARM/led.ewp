@@ -286,7 +286,7 @@
         <option>
           <name>CCAllowList</name>
           <version>1</version>
-          <state>11111110</state>
+          <state>00000000</state>
         </option>
         <option>
           <name>CCDebugInfo</name>
@@ -371,7 +371,7 @@
         </option>
         <option>
           <name>CCOptLevel</name>
-          <state>3</state>
+          <state>1</state>
         </option>
         <option>
           <name>CCOptStrategy</name>
@@ -380,7 +380,7 @@
         </option>
         <option>
           <name>CCOptLevelSlave</name>
-          <state>3</state>
+          <state>1</state>
         </option>
         <option>
           <name>CompilerMisraRules98</name>
@@ -1039,6 +1039,12 @@
     <group>
       <name>APP</name>
       <file>
+        <name>$PROJ_DIR$\..\APP\key.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\APP\key.h</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\..\APP\task.c</name>
       </file>
       <file>
@@ -1058,6 +1064,9 @@
       </file>
       <file>
         <name>$PROJ_DIR$\..\Src\gpio.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\Src\tim.c</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\Src\stm32f4xx_it.c</name>

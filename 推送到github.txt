@@ -1,0 +1,19 @@
+max@DESKTOP-MAX MINGW64 /e/3_porject/Github/stm32 (master)
+$ git push --set-upstream origin master
+The authenticity of host 'github.com (13.250.177.223)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com,13.250.177.223' (RSA) to the list of known hosts.
+Enumerating objects: 1104, done.
+Counting objects: 100% (1104/1104), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (1073/1073), done.
+Writing objects: 100% (1103/1103), 15.68 MiB | 1.18 MiB/s, done.
+Total 1103 (delta 431), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (431/431), done.
+To github.com:inkMa/stm32.git
+   e3c5e45..a03ea57  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+max@DESKTOP-MAX MINGW64 /e/3_porject/Github/stm32 (master)
+$
