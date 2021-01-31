@@ -30,7 +30,7 @@
 
 
 void LCD_Init(void);//
-void LCD_draw_point(uint16_t x0,uint16_t y0,uint16_t color);
+void LCD_drawPoint(uint16_t x0,uint16_t y0,uint16_t color);
 void LCD_fillRect(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t color);
 void LCD_drawRect(uint16_t x0,uint16_t y0,uint16_t x1,uint16_t y1,uint16_t* pPixels);
 #endif
