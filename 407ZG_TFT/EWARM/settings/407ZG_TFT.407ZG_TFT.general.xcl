@@ -1,0 +1,15 @@
+"D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\bin\armproc.dll" 
+
+"D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\bin\armstlink2.dll" 
+
+"E:\3_porject\STM32_study\407ZG_TFT\EWARM\407ZG_TFT\Exe\407ZG_TFT.out" 
+
+--plugin="D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\bin\armbat.dll" 
+
+--device_macro="D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F4xx.dmac" 
+
+--flash_loader="D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F4xxx.board" 
+
+
+
+
