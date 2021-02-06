@@ -23,7 +23,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "lvgl.h"
+#include "porting/lv_port_disp_template.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -59,6 +60,7 @@ static void MX_FSMC_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 extern void LCD_Init(void);
+extern void lv_demo_stress(void);
 /* USER CODE END 0 */
 
 /**
@@ -93,6 +95,9 @@ int main(void)
   MX_FSMC_Init();
   /* USER CODE BEGIN 2 */
   LCD_Init();
+  lv_init();
+  lv_port_disp_init();
+  lv_demo_stress();
   static uint32_t sec = 0;
   /* USER CODE END 2 */
 
@@ -103,9 +108,16 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    HAL_Delay(1000);
-    sec++;
-    HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, sec&0x01?GPIO_PIN_SET:GPIO_PIN_RESET);
+    lv_tick_inc(1);
+    lv_task_handler();
+    uint32_t new_sec = HAL_GetTick()/1000;
+    if(sec!= new_sec)
+    {
+      HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, sec&0x01?GPIO_PIN_SET:GPIO_PIN_RESET);
+      sec = new_sec;
+    }
+    
+    HAL_Delay(1);
   }
   /* USER CODE END 3 */
 }
