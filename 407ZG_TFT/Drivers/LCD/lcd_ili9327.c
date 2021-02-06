@@ -7,10 +7,9 @@
 #define     LCD_RS_HIGH     HAL_GPIO_WritePin(GPIOA, LCD_DC_Pin, GPIO_PIN_SET)
 #define     LCD_RES_LOW     HAL_GPIO_WritePin(GPIOA, LCD_RST_Pin, GPIO_PIN_RESET)
 #define     LCD_RES_HIGH    HAL_GPIO_WritePin(GPIOA, LCD_RST_Pin, GPIO_PIN_SET)
-#define LCD_WIDTH 160
-#define LCD_HIGH 128
+#define LCD_WIDTH 400
+#define LCD_HIGH 240
 
-//数据缓存区定义，根据ram的大小，可以自行调节
 
 
 #define TFTLCD_BASE        ((uint32_t)(0x6C000000 | 0x0000007E))
@@ -175,10 +174,10 @@ void LCD_Init(void)
 	LCD_writeData(0x00); 
 	
     LCD_writeCmd(0x36);
-    LCD_writeData(0x48);
+    LCD_writeData(0x28);//28 横屏 48竖屏 e8横屏颠倒
     
 	LCD_writeCmd(0x29); //display on
   
-  LCD_fillRect(0,0,239,399,BLACK);
+  //LCD_fillRect(0,0,239,399,BLACK);
 }
 
